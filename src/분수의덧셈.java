@@ -6,7 +6,7 @@ public class 분수의덧셈 {
     public static void main(String[] args) {
         // psvm : 메인 메서드 만드는 단축어
 
-        System.out.println(solution(1,2,3,4));
+        System.out.println(solution(1,2,3,4)[0]);
 
     }
 
@@ -17,15 +17,20 @@ public class 분수의덧셈 {
         int denum = denum1*num2+denum2*num1;
         int num = num1*num2;
 
-        int min = gcd(denum, num);
-        int a = denum % min;
-        int b = num % min;
+        System.out.println(denum+","+num);
+
+        int max = gcd(denum, num);
+        int a = denum / max;
+        int b = num / max;
 
         answer[0] = a;
         answer[1] = b;
 
+        System.out.println(max);
+
         return answer;
     }
+
     public static int gcd(int a, int b){
         while (b > 0){
             int tmp = a;
@@ -34,4 +39,5 @@ public class 분수의덧셈 {
         }
         return a;
     }
+
 }
