@@ -15,8 +15,6 @@ public class 중앙값구하기 {
 
         int b = a / 2;
 
-
-
         return a;
     }
 }
